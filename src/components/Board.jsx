@@ -54,6 +54,12 @@ export default function Board() {
 
   }, [squares,winner, calculateWinner])
 
+  const handleResetGame = useCallback(() => {
+    setSquares(Array(9).fill(null));
+    setStatus(`Next player: ${xIsNext ? 'X' : 'O'}`);
+    setWinner(null);
+  }, [xIsNext]);
+
   return (
     <div className="board-container">
       <div className="infoGame">
@@ -101,6 +107,13 @@ export default function Board() {
           onClick={() => handleClick(8)}
         />
       </dir>
+      <button 
+        className="reset-button" 
+        type="button"
+        onClick={handleResetGame}
+        >
+        RESET
+      </button>
     </div>
   )
 }

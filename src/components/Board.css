@@ -1,12 +1,21 @@
 .board-container {
-  flex: 1;
+  /* flex: 1; */
   margin: auto;
   width: 50%;
   text-align: center;
 }
 
 .squares-container {
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.reset-button {
+  width: 100%;
+  height: 3rem;
+  background:rgb(17, 65, 104);
+  color: #fff;
+  cursor: pointer;
 }
