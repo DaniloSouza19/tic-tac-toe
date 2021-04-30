@@ -3,16 +3,18 @@ import './Board.css'
 import Square from './Square'
 
 export default function Board() {
-  const status = 'Next player: X';
   const [squares, setSquares] = useState(Array(9).fill(null));
+  const [xIsNext, setXIsNext] = useState(true);
+  const status = `Next player: ${xIsNext ? 'X' : 'O'}`;
 
   const handleClick = useCallback((i) => {
     const s = squares.slice();
 
-    s[i] = 'X';
+    s[i] = xIsNext ? 'X' : 'O';
 
-    setSquares(s)
-  }, [squares]);
+    setSquares(s);
+    setXIsNext(!xIsNext);
+  }, [squares, xIsNext]);
 
   return (
     <div className="board-container">
