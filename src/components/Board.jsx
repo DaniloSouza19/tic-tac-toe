@@ -63,7 +63,7 @@ export default function Board() {
   return (
     <div className="board-container">
       <div className="infoGame">
-        <strong>{status}</strong>
+        <h1>{status}</h1>
       </div>
       <dir className="squares-container">
         <Square
