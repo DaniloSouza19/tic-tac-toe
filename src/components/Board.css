@@ -1,0 +1,12 @@
+.board-container {
+  flex: 1;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+
+.squares-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
